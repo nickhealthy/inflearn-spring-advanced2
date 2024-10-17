@@ -2,6 +2,9 @@ package hello.proxy.pureproxy.proxy.code;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 실제 객체
+ */
 @Slf4j
 public class SubjectImpl implements Subject {
 
