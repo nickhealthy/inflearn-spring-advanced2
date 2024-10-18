@@ -5,8 +5,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MessageDecorator extends Decorator {
 
+    private final Component component;
+
     public MessageDecorator(Component component) {
-        super(component);
+        super(null);
+        this.component = component;
     }
 
     @Override
