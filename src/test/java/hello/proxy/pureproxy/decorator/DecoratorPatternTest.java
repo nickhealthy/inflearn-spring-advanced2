@@ -3,6 +3,7 @@ package hello.proxy.pureproxy.decorator;
 import hello.proxy.pureproxy.decorator.code.DecoratorPatternClient;
 import hello.proxy.pureproxy.decorator.code.MessageDecorator;
 import hello.proxy.pureproxy.decorator.code.RealComponent;
+import hello.proxy.pureproxy.decorator.code.TimeDecorator;
 import org.junit.jupiter.api.Test;
 
 public class DecoratorPatternTest {
@@ -18,13 +19,29 @@ public class DecoratorPatternTest {
     }
 
     /**
-     * 데코레이터 패턴 적용
+     * 데코레이터 패턴 적용 - 핵심은 클라이언트의 코드를 전혀 건드리지 않았다는 점이다.
+     *  - 부가 기능 추가(메시지 변경)
+     *
      */
     @Test
     void decorator1() {
         RealComponent realComponent = new RealComponent();
         MessageDecorator messageDecorator = new MessageDecorator(realComponent);
         DecoratorPatternClient client = new DecoratorPatternClient(messageDecorator);
+        client.execute();
+    }
+
+    /**
+     * 데코레이터 패턴 적용 - 핵심은 클라이언트의 코드를 전혀 건드리지 않았다는 점이다.
+     *  - 부가 기능 추가(메시지 변경)
+     *  - 부가 기능 추가(시간 경과 로그 추가)
+     */
+    @Test
+    void decorator2() {
+        RealComponent realComponent = new RealComponent();
+        MessageDecorator messageDecorator = new MessageDecorator(realComponent);
+        TimeDecorator timeDecorator = new TimeDecorator(messageDecorator);
+        DecoratorPatternClient client = new DecoratorPatternClient(timeDecorator);
         client.execute();
     }
 }
