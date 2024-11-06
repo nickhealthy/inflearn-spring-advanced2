@@ -69,6 +69,11 @@ public class AdvisorTest {
 
                 private String matchName = "save";
 
+                /**
+                 * boolean result = method.getName().equals(matchName);
+                 * - 포인트컷을 save 이름을 가진 메서드에만 적용했으므로 save() 메서드만 어드바이저가 적용된다.
+                 * - 따라서 프록시 로직은 save 메서드만 적용된다.
+                 */
                 @Override
                 public boolean matches(Method method, Class<?> targetClass) {
                     boolean result = method.getName().equals(matchName);
@@ -100,7 +105,7 @@ public class AdvisorTest {
             스프링이 제공하는 포인트컷(스프링은 이외에도 무수히 많은 포인트컷을 제공한다, 하지만 나중엔 AspectJ 라이브러리를 사용하게 된다.)
             - 메서드 이름을 기반으로 매칭한다
             - pointcut.setMappedName(); 해당 메서드에 메서드 이름을 지정하면 지정된 메서드만 어드바이스가 적용되는 포인트컷이 완성된다.
-            - 내부에서는 PatternMatchUtils 를 사용한다.
+            - 내부에서는 Spring 이 제공하는 PatternMatchUtils 를 사용한다.
          */
         NameMatchMethodPointcut pointcut = new NameMatchMethodPointcut();
         pointcut.setMappedName("save");
