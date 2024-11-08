@@ -9,8 +9,11 @@ import org.aopalliance.intercept.MethodInvocation;
 import java.lang.reflect.Method;
 
 /**
- * 프록시 팩토리1
- * - V1 인터페이스 Advice 구현(인터페이스를 사용하기 때문에 기본적으로 프록시 팩토리는 JDK 동적 프록시를 사용함)
+ * 강의: 프록시 팩토리1
+ * Advice 구현(프록시에 들어가는 부가기능을 추가하는 로직)
+ * - V1 인터페이스 Advice(인터페이스를 사용하기 때문에 기본적으로 프록시 팩토리는 JDK 동적 프록시를 사용함)
+ * - V2 인터페이스 없는 구현체 Advice(CGLIB 사용)
+ * - V3 인터페이스 없는 구현체 + 컴포넌트 스캔 대상 Advice(CGLIB) 사용
  */
 @Slf4j
 public class LogTraceAdvice implements MethodInterceptor {
