@@ -8,13 +8,13 @@
 
 (정리 예정)
 
-| 섹션 | 바로가기 | 비고                          |
-| ---- | -------- | ----------------------------- |
-| 4장  |          | 프록시 패턴과 데코레이터 패턴 |
-| 5장  |          | 동적 프록시 기술              |
-| 6장  |          | 스프링이 지원하는 프록시      |
-| 7장  |          | 빈 후처리기                   |
-| 8장  |          | @Aspect Aop                   |
+| 섹션 | 바로가기                                                     | 비고                          |
+| ---- | ------------------------------------------------------------ | ----------------------------- |
+| 4장  | [chapter4.md](https://github.com/nickhealthy/inflearn-spring-advanced2/blob/main/readme/chapter4.md) | 프록시 패턴과 데코레이터 패턴 |
+| 5장  | [chapter5.md](https://github.com/nickhealthy/inflearn-spring-advanced2/blob/main/readme/chapter5.md) | 동적 프록시 기술              |
+| 6장  | [chapter6.md](https://github.com/nickhealthy/inflearn-spring-advanced2/blob/main/readme/chapter6.md) | 스프링이 지원하는 프록시      |
+| 7장  | [chapter7.md](https://github.com/nickhealthy/inflearn-spring-advanced2/blob/main/readme/chapter7.md) | 빈 후처리기                   |
+| 8장  | [chapter8.md](https://github.com/nickhealthy/inflearn-spring-advanced2/blob/main/readme/chapter8.md) | @Aspect Aop                   |
 
 
 
